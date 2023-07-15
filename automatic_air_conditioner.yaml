@@ -21,7 +21,7 @@ blueprint:
     language:
       name: Select language
       description: 'Select the language for the text of notifications.'
-      default: English
+      default: Nederlands
       selector:
         select:
           mode: dropdown
@@ -31,7 +31,7 @@ blueprint:
 
     climate:
       name: Entities climate
-      description: 'Select climate entities to be used. '
+      description: 'Select climate entities to be used.'
       selector:
         entity:
           domain: climate
@@ -114,7 +114,7 @@ blueprint:
 
     target_temperature_start:
       name: Target temperature start
-      default: 21
+      default: 21.5
       description: 'Set the startup target temperature. '
       selector:
         number:
@@ -126,7 +126,7 @@ blueprint:
 
     target_temperature_stop:
       name: Target temperature stop
-      default: 22
+      default: 21.5
       description: 'Set the target temperature for shutdown.'
       selector:
         number:
@@ -134,10 +134,10 @@ blueprint:
           max: 30
           unit_of_measurement: °C
           mode: slider
-          step: 1
+          step: 0.5
 
     delay_temperature_stop:
-      default: 10
+      default: 5
       name: Delay temperature stop
       description: 'Set the climate shutdown delay since the target temperature has been reached.'
       selector:
