@@ -279,20 +279,20 @@ action:
           - domain: mobile_app
             type: notify
             device_id: !input notify_device
-            title: "{% if language == 'Italiano' %}CONDIZIONATORE
+            title: "{% if language == 'Nederlands' %}Airco
                     {% else %}AIR CONDITIONER.
                     {% endif %}"
-            message: "{% if language == 'Italiano' %}Accensione condizionatore eseguita ci sono {{state_attr(climate,'current_temperature')|float(0)}}°
+            message: "{% if language == 'Nederlands' %}Zet de airco aan want het is: {{state_attr(climate,'current_temperature')|float(0)}}°
                       {% else %} Turn on air conditioner performed there are {{state_attr(climate,'current_temperature')|float(0)}}°
                       {% endif %}"
         else:
           - domain: mobile_app
             type: notify
             device_id: !input notify_device
-            title: "{% if language == 'Italiano' %}CONDIZIONATORE
+            title: "{% if language == 'Nederlands' %}Airco
                     {% else %}  AIR CONDITIONER.
                     {% endif %}"
-            message: "{% if language == 'Italiano' %}Accensione condizionatore non eseguito perchè hai lasciato aperta la finesta.
+            message: "{% if language == 'Nederlands' %}Airco is niet aangezet, er staat een raam open.
                       {% else %} Turning on air conditioner not performed because you left the window open.
                       {% endif %}"
 - alias: Spegni climate
